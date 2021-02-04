@@ -13,6 +13,7 @@
 
 		<!-- Bootstrap core CSS -->
 		<link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+		<link rel="stylesheet" href="{{ asset('assets/css/boutiquefrancaise.css')}}"
 
 		<style>
 			.bd-placeholder-img {
@@ -48,10 +49,14 @@
 							</a>
 						</li>
 					</ul>
-					<form class="form-inline mt-2 mt-md-0">
-						<input class="form-control mr-sm-2" type="text" placeholder="Votre recherche" aria-label="Recherche">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-					</form>
+					<div class="navbar-item-custom">            
+						{% if app.user %}
+                        	<a href="{{ path('account') }}">Mon compte</a>  |  <a href="{{ path('app_logout') }}">Déconnexion</a>
+                        {% else %}
+                        	<a href="{{ path('app_login') }}">Connexion</a>  |  <a href="{{ path('register') }}">Inscription</a>
+                    	{% endif %}
+					</div>
+
 				</div>
 			</nav>
 		</header>
