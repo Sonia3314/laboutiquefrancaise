@@ -4,6 +4,11 @@
 
 {% block content %}
     <h1>Mon compte </h1>
-    Bienvenue dans votre espace  ! C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles
-    {{ dump(app.user) }}
+    Bienvenue dans votre espace  {{ app.user.firstname | title }} {{ app.user.lastname | title }} !<br> 
+    C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles
+   <hr> 
+   - <a href="{{ path('account_password') }}">Modifier mon mot de passe</a><br>
+   - Ajouter mes adresses<br>
+   - Mes commandes<br>
+   <hr>
 {% endblock %}
