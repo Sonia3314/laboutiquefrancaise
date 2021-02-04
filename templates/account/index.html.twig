@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte - La Boutique Française {% endblock %}
+
+{% block content %}
+    <h1>Mon compte </h1>
+    Bienvenue dans votre espace  ! C'est dans cet espace que vous allez pouvoir gérer toutes vos informations personnelles
+    {{ dump(app.user) }}
+{% endblock %}
