@@ -10,7 +10,7 @@ class Search
      * @var string
      */
 
-    public $string= '';
+    public $string = '';
 
 
     /**
